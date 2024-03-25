@@ -6,23 +6,10 @@
  */
 
 import React from 'react';
-import {StatusBar, StyleSheet, View} from 'react-native';
-
-import RadialGradient from './src/RadialGradient';
-import WhiteSpot from './src/whitespot';
+import {Home} from './src/pages/home';
 
 function App(): React.JSX.Element {
-  return (
-    <>
-      <StatusBar hidden />
-
-      <RadialGradient />
-
-      <View style={{...StyleSheet.absoluteFillObject, flex: 1, top: -50}}>
-        <WhiteSpot />
-      </View>
-    </>
-  );
+  return <Home />;
 }
 
 export default App;

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { SvgXml } from 'react-native-svg';
+import {StyleSheet, View} from 'react-native';
+import {SvgXml} from 'react-native-svg';
 
 const xml = `
 <svg width="192" height="119" viewBox="0 0 192 119">
@@ -8,4 +8,13 @@ const xml = `
 </svg>
 `;
 
-export default () => <SvgXml xml={xml} width="217" height="285" style={{ bottom:"0", right:"0", zIndex:2}}  />
+export default () => (
+  <View style={styles.parent}>
+    <SvgXml xml={xml} width="217" height="285" style={styles.main} />
+  </View>
+);
+
+const styles = StyleSheet.create({
+  main: {bottom: '0', right: '0', zIndex: 2},
+  parent: {...StyleSheet.absoluteFillObject, flex: 1, top: -50},
+});
