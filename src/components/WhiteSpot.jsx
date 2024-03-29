@@ -1,6 +1,7 @@
 import * as React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {Image, StyleSheet, View} from 'react-native';
 import {SvgXml} from 'react-native-svg';
+import {xm} from './NameField';
 
 const xml = `
 <svg width="192" height="119" viewBox="0 0 192 119">
@@ -10,11 +11,23 @@ const xml = `
 
 export default () => (
   <View style={styles.parent}>
-    <SvgXml xml={xml} width="217" height="285" style={styles.main} />
+    <SvgXml xml={xml} width={217 * xm} height={285 * xm} style={styles.main} />
+    <Image
+      source={require('../../assets/logo_penny.png')}
+      style={styles.logo}
+      resizeMode="contain"
+    />
   </View>
 );
 
 const styles = StyleSheet.create({
   main: {bottom: '0', right: '0', zIndex: 2},
-  parent: {...StyleSheet.absoluteFillObject, flex: 1, top: -50},
+  parent: {...StyleSheet.absoluteFillObject, flex: 1, top: -60},
+  logo: {
+    width: 96.67 * xm,
+    zIndex: 3,
+    ...StyleSheet.absoluteFillObject,
+    top: 36,
+    left: 24,
+  },
 });

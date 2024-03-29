@@ -6,10 +6,10 @@
  */
 
 import React from 'react';
-import {Home} from './src/pages/home';
+import TabBar from './src/components/Tabbar';
 
 function App(): React.JSX.Element {
-  return <Home />;
+  return <TabBar />;
 }
 
 export default App;

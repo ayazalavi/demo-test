@@ -11,7 +11,7 @@ const CardBackground = ({children, index}) => {
     <View style={[styles.main, mr]}>
       <Svg height="100%" width="100%" style={styles.svg}>
         <Defs>
-          <LinearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <LinearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
             <Stop offset="0" stopColor={FROM_COLOR} />
             <Stop offset="1" stopColor={TO_COLOR} stopOpacity={50} />
           </LinearGradient>
