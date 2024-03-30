@@ -50,12 +50,13 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 16,
     backgroundColor: 'white',
     paddingBottom: 20,
-    bottom: 16,
+    bottom: 0,
     paddingHorizontal: 16 * xm,
     shadowColor: '#000000',
     shadowOpacity: 0.25,
     shadowOffset: {width: 0, height: 7},
     shadowRadius: 16,
+    position: 'absolute',
   },
 });
 
