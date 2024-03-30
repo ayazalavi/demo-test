@@ -12,8 +12,8 @@ const CardBackground = ({children, index}) => {
       <Svg height="100%" width="100%" style={styles.svg}>
         <Defs>
           <LinearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <Stop offset="0" stopColor={FROM_COLOR} />
-            <Stop offset="1" stopColor={TO_COLOR} stopOpacity={50} />
+            <Stop offset="40%" stopColor={FROM_COLOR} />
+            <Stop offset="1" stopColor={TO_COLOR} stopOpacity={0.5} />
           </LinearGradient>
         </Defs>
         <Rect width="100%" height="100%" fill="url(#grad)" />
@@ -29,6 +29,10 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     flex: 1,
     marginVertical: 9,
+    shadowColor: '#000000',
+    shadowOpacity: 0.2,
+    shadowOffset: {width: 0, height: 6},
+    shadowRadius: 15,
   },
   svg: {position: 'absolute'},
 });
