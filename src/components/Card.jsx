@@ -12,8 +12,8 @@ const CardBackground = ({children, index}) => {
       <Svg height="100%" width="100%" style={styles.svg}>
         <Defs>
           <LinearGradient id="grad" x1="0%" y1="0%" x2="50%" y2="150%">
-            <Stop offset="0" stopColor={FROM_COLOR} />
-            <Stop offset="1" stopColor={TO_COLOR} stopOpacity={0.5} />
+            <Stop offset="0.5" stopColor={FROM_COLOR} />
+            <Stop offset="1" stopColor={TO_COLOR} stopOpacity={0.7} />
           </LinearGradient>
         </Defs>
         <Rect width="100%" height="100%" fill="url(#grad)" />
